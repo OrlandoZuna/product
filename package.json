@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "manipular productos",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/OrlandoZuna/product/issues"
   },
-  "homepage": "https://github.com/OrlandoZuna/product#readme"
+  "homepage": "https://github.com/OrlandoZuna/product#readme",
+  "dependencies": {
+    "mustache": "^4.1.0"
+  }
 }

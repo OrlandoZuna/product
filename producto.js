@@ -1,4 +1,4 @@
-class productos{
+class productoss{
     constructor(name, description, quantity){
          this.name = name;
          this.description= description;
@@ -33,4 +33,4 @@ class productosManagement {
         return this.listproductos;
     }
 }
-export{productos, productosManagement};
+export{productoss, productosManagement};
