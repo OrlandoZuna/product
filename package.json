@@ -1,0 +1,19 @@
+{
+  "name": "producto",
+  "version": "1.0.0",
+  "description": "manipular productos",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrlandoZuna/product.git"
+  },
+  "author": "zuna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OrlandoZuna/product/issues"
+  },
+  "homepage": "https://github.com/OrlandoZuna/product#readme"
+}
