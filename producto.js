@@ -1,36 +1,53 @@
-class productoss{
-    constructor(name, description, quantity){
-         this.name = name;
-         this.description= description;
-         this.quantity=quantity;
+class Product {
+    constructor(id, name, description, quatity) {
+      this.id = id;
+      this.name = name;
+      this.description = description;
+      this.quatity = quatity;
     }
-}
-class productosManagement {
+    getId() {
+      return this.id;
+    }
+    getName() {
+      return this.name;
+    }
+    getDescription() {
+      return this.description;
+    }
+    getQuantity() {
+      return this.quatity;
+    }
+  }
+  export default  class ProductManagement {
     constructor() {
-        this.listproductos = []
+      this.listproducts = new Array();
     }
-    addproductos(producto){
-        this.listproductos.push(producto);
+    addProduct(name, description, quantity) {
+      var date = new Date();
+      var product = new Product(date, name, description, quantity);
+      this.listproducts.push(product);
     }
-    removeproductos(producto){
-        for (var i=0; i< this.listproductos.length; i++){
-            if(this.listproductos[i]== producto){
-                this.listproductos.splice(i, 1);
-                return;
-            }
+    removeProducts(product) {
+      for (var i = 0; i < this.listproducts.length; i++) {
+        if (this.listproducts[i] == product) {
+          this.listproducts.splice(i, 1);
+          return true;
         }
-        return;
+      }
+      return false;
     }
-    updateproductos(producto, newproducto){
-        for (var i=0; i< this.listproductos.length; i++){
-            if(this.listproductos[i]== producto){
-                this.listproductos[i]= newproducto;
-                return;
-            } 
+    updateProdcuts(product, updateproduct) {
+      for (var i = 0; i < this.listproducts.length; i++) {
+        if (this.listproducts[i] == product) {
+          this.listproducts[i] = updateproduct;
+          return true;
         }
+      }
+      return false;
     }
-    showproductos(){
-        return this.listproductos;
+    getList() {
+      return this.listproducts;
     }
-}
-export{productoss, productosManagement};
+  }
+  export {Product, ProductManagement};
+  

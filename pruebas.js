@@ -1,12 +1,15 @@
-import {productoss, productosManagement } from "./producto.js";
-let p1 = new productoss("pollo", 'pollo sofia', 20);
-let p2 = new productoss('galletas', 'galletas mabel', 50);
-let p3 = new productoss("pollo", 'pollo imba', 50);
-let manager = new productosManagement();
-manager.addproductos(p1);
-manager.addproductos(p2);
-//manager.addproductos(p3);
-// manager.removeproductos(p1);
-manager.updateproductos(p1, p3);
-console.log(manager.showproductos());
- 
+import { ProductManagement,Product } from "./producto.js";
+var p = new ProductManagement();
+
+p.addProduct("Pollo", "Pollo sofia", 12);
+p.addProduct("carne", "carne santa cruz", 5);
+p.addProduct("arroz", "arroz de emapa", 50);
+var lista = p.getList();
+console.log(lista);
+var deletep = lista[1];
+p.removeProducts(deletep);
+var lista = p.getList();
+var unpdate = new Product(1, lista[1].name, "arroz de xyz", 1);
+p.updateProdcuts(lista[1], unpdate);
+
+console.log(lista);
